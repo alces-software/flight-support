@@ -1,0 +1,22 @@
+[
+  {
+    "type": "textarea",
+    "name": "Description of issue"
+  },
+  {
+    "type": "input",
+    "name": "Name of application"
+  },
+  {
+    "type": "input",
+    "name": "Version of application"
+  },
+  {
+    "type": "input",
+    "name": "Job-ID showing issue"
+  },
+  {
+    "type": "textarea",
+    "name": "Steps to replicate issue"
+  }
+]

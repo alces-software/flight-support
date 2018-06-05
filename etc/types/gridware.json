@@ -1,0 +1,21 @@
+[
+  {
+    "type": "markdown",
+    "content": "See package listing at https://gridware.alces-flight.com for full details of available Alces Gridware."
+  },
+  {
+    "type": "input",
+    "name": "Package Name",
+    "help": "E.g. python3"
+  },
+  {
+    "type": "input",
+    "name": "Package Version",
+    "help": "E.g. v3.6.4"
+  },
+  {
+    "type": "textarea",
+    "name": "Enter a description of your intended usage",
+    "help": "E.g. /home/you/myscript.py"
+  }
+]

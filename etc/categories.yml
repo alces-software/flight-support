@@ -1,0 +1,32 @@
+- title: Job problems/assistance
+  issues:
+    - identifier: job-script
+      title: Job script creation advice/assistance
+    - identifier: job-running
+      title: Job execution advice/assistance
+    - identifier: problem-job
+      title: Assistance with a problem job
+    - identifier: app-problems
+      title: Application problems/bugs
+- title: Software installation
+  issues:
+    - identifier: self-install
+      title: Self-installation advice/assistance
+    - identifier: gridware
+      title: Installation of available Alces Gridware
+    - identifier: custom-commercial
+      title: Installation of a custom commercial application
+    - identifier: custom-foss
+      title: Installation of a custom open source application
+    - identifier: distro-package
+      title: Installation of RPM package(s) from upstream source
+- title: Restrictions/quotas
+  issues:
+    - identifier: storage-quota
+      title: Request an increased storage quota
+    - identifier: scheduler
+      title: Modify a job scheduler queue restriction
+- title: Other
+  issues:
+    - identifier: general
+      title: General request for advice/assistance

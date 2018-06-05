@@ -1,0 +1,34 @@
+[
+  {
+    "type": "input",
+    "name": "Package Name"
+  },
+  {
+    "type": "input",
+    "name": "Package version"
+  },
+  {
+    "type": "input",
+    "name": "Primary vendor"
+  },
+  {
+    "type": "input",
+    "name": "Software license: Paid license / free to me / free to all"
+  },
+  {
+    "type": "input",
+    "name": "Licensee: Me / specific group / my company or institution"
+  },
+  {
+    "type": "input",
+    "name": "Link to package installer"
+  },
+  {
+    "type": "input",
+    "name": "Link to license file"
+  },
+  {
+    "type": "textarea",
+    "name": "Enter a description of your intended usage"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "type": "input",
+    "name": "RPM package name"
+  },
+  {
+    "type": "input",
+    "name": "Upstream Repo"
+  },
+  {
+    "type": "input",
+    "name": "To be installed on"
+  }
+]

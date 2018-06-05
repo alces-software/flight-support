@@ -1,0 +1,30 @@
+[
+  {
+    "type": "input",
+    "name": "Package Name"
+  },
+  {
+    "type": "input",
+    "name": "Package version"
+  },
+  {
+    "type": "input",
+    "name": "Primary vendor"
+  },
+  {
+    "type": "textarea",
+    "name": "Description of issue"
+  },
+  {
+    "type": "textarea",
+    "name": "Expected results"
+  },
+  {
+    "type": "input",
+    "name": "Example data-set location"
+  },
+  {
+    "type": "textarea",
+    "name": "Steps to reproduce issue"
+  }
+]

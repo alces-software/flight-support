@@ -1,0 +1,18 @@
+[
+  {
+    "type": "input",
+    "name": "Description of job"
+  },
+  {
+    "type": "input",
+    "name": "Job resources: Single node / multi-node / special node (e.g. himem, GPU, phi)"
+  },
+  {
+    "type": "input",
+    "name": "Name of applications"
+  },
+  {
+    "type": "textarea",
+    "name": "Example set of commands for manual running"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "type": "input",
+    "name": "Job-ID showing issue"
+  },
+  {
+    "type": "input",
+    "name": "Description of problem"
+  },
+  {
+    "type": "input",
+    "name": "Expected results"
+  },
+  {
+    "type": "input",
+    "name": "Location of job-script"
+  }
+]
