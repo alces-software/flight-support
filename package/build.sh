@@ -24,7 +24,7 @@ popd > /dev/null
 pushd "${temp_dir}"/data/opt/flight-support > /dev/null
 bundle install --without="development test" --path=vendor
 
-rm -rf Rakefile vendor/cache bin .gitignore README.md
+rm -rf Rakefile vendor/cache .gitignore README.md
 rm -rf vendor/ruby/2.2.0/bundler/gems/extensions \
   vendor/ruby/2.2.0/cache
 popd
