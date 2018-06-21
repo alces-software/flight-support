@@ -13,6 +13,15 @@ module Alces
                         'v1.0.2 -- 2018-05-30')
           s2 = <<EOF
 #{Paint['=============',:yellow]}
+#{Paint[' Find support', :yellow, :bold]}
+#{Paint['=============',:yellow]}
+
+You can use this tool to find support using #{Pretty.command('alces support find')}.
+
+EOF
+          s2 <<
+            <<EOF
+#{Paint['=============',:yellow]}
 #{Paint[' Get support', :yellow, :bold]}
 #{Paint['=============',:yellow]}
 EOF

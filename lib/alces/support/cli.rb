@@ -1,4 +1,5 @@
 require 'commander/no-global-highline'
+require 'alces/support/commands/find'
 require 'alces/support/commands/info'
 require 'alces/support/commands/request'
 
@@ -11,6 +12,13 @@ module Alces
         program :name, 'alces support'
         program :version, '0.0.1'
         program :description, 'Alces Flight support request tool'
+
+        command :find do |c|
+          c.syntax = 'support find'
+          c.summary = 'Find support'
+          c.description = 'Find a support article.'
+          c.action Commands::Find, :find
+        end
 
         command :info do |c|
           c.syntax = 'support info'
