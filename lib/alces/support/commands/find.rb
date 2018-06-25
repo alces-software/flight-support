@@ -1,6 +1,7 @@
-require 'alces/support/topic'
 require 'alces/pretty'
+require 'alces/support/topic'
 require 'colorize'
+require 'tty-pager'
 require 'tty-prompt'
 
 module Alces
@@ -60,7 +61,7 @@ EOF
         end
 
         def display_article(article)
-          puts article.content
+          pager.page(article.content)
         end
 
         def ask_advice_found?
@@ -70,6 +71,10 @@ EOF
           else
             throw :top
           end
+        end
+
+        def pager
+          @pager ||= TTY::Pager.new(command: 'man -l -')
         end
 
         def prompt

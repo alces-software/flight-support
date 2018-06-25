@@ -12,6 +12,8 @@ source 'https://rubygems.org' do
   gem 'activesupport'
   gem 'whirly'
   gem 'paint'
+  gem 'tty-command'
+  gem 'tty-pager'
   gem 'tty-prompt'
   gem 'xdg'
   gem 'mail'
