@@ -1,4 +1,5 @@
 require 'alces/pretty'
+require 'alces/support/errors'
 require 'alces/support/topic'
 require 'colorize'
 require 'tty-pager'
@@ -58,6 +59,14 @@ EOF
 
           display_article(article)
           ask_advice_found?
+        rescue ArticleNotFoundError, ArticleRenderError, TTY::Command::ExitError
+          puts Paint[error_message_for($!), :red]
+          yes = prompt.yes?("Would you like to find another article?")
+          if yes
+            throw :top
+          else
+            throw :quit
+          end
         end
 
         def display_article(article)
@@ -79,6 +88,23 @@ EOF
 
         def prompt
           @prompt ||= TTY::Prompt.new(help_color: :cyan)
+        end
+
+        def error_message_for(ex)
+          case ex
+          when ArticleNotFoundError
+            <<-EOF
+
+    Unfortunately, the content for that article could not be found at the
+    moment.
+            EOF
+          else
+            <<-EOF
+
+    Unfortunately, there was an unexpected error when trying to display the
+    article.
+            EOF
+          end
         end
       end
     end
