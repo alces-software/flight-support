@@ -20,9 +20,7 @@ module Alces
                 --to man \
                 --standalone \
                 --metadata title='#{@title}' \
-                --metadata section=#{@meta['section'].to_i} \
-                --metadata author='#{@meta['author']}' \
-                --metadata date='#{@meta['date']}'  \
+                #{content_metadata} \
                 --output=-
                     EOF
                    )
@@ -41,6 +39,13 @@ module Alces
 
       def cmd
         @_cmd ||= TTY::Command.new(printer: :null)
+      end
+
+      def content_metadata
+        @meta.map do |k,v|
+          "--metadata #{k}='#{v}'"
+        end
+          .join(" ")
       end
     end
   end
