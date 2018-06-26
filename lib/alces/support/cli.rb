@@ -15,7 +15,7 @@ module Alces
 
         command :find do |c|
           c.syntax = 'support find'
-          c.summary = 'Find support'
+          c.summary = 'Find a support article'
           c.description = 'Find a support article.'
           c.action Commands::Find, :find
         end
