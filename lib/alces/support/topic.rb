@@ -17,13 +17,13 @@ module Alces
 
       attr_accessor :title, :articles, :subtopics
 
-      def initialize(metadata)
-        @title = metadata['title']
-        if metadata['articles']
-          @articles = metadata['articles'].map(&Article.method(:new))
+      def initialize(attrs)
+        @title = attrs['title']
+        if attrs['articles']
+          @articles = attrs['articles'].map(&Article.method(:new))
         end
-        if metadata['subtopics']
-          @subtopics = metadata['subtopics'].map(&Topic.method(:new))
+        if attrs['subtopics']
+          @subtopics = attrs['subtopics'].map(&Topic.method(:new))
         end
       end
 

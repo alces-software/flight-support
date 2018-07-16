@@ -6,10 +6,10 @@ module Alces
     class Article
       attr_accessor :title, :url, :meta
 
-      def initialize(metadata)
-        @title = metadata['title']
-        @url = metadata['url']
-        @meta = metadata['meta']
+      def initialize(attrs)
+        @title = attrs['title']
+        @url = attrs['url']
+        @meta = attrs['meta']
       end
 
       def content
