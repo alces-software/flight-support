@@ -17,4 +17,6 @@ source 'https://rubygems.org' do
   gem 'tty-prompt'
   gem 'xdg'
   gem 'mail'
+  gem 'http'
+  gem 'word_wrap'
 end

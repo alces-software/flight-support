@@ -6,16 +6,29 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     colorize (0.8.1)
     commander (4.4.5)
       highline (~> 1.7.2)
     concurrent-ruby (1.0.5)
+    domain_name (0.5.20180417)
+      unf (>= 0.0.5, < 1.0.0)
     equatable (0.5.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
     highline (1.7.10)
+    http (3.3.0)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.1.1)
+    http_parser.rb (0.6.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     mail (2.7.0)
@@ -28,6 +41,7 @@ GEM
     pastel (0.7.2)
       equatable (~> 0.5.0)
       tty-color (~> 0.4.0)
+    public_suffix (3.0.2)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
@@ -48,6 +62,9 @@ GEM
     tty-which (0.3.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
     unicode-display_width (1.1.3)
     unicode_utils (1.4.0)
     verse (0.5.0)
@@ -56,6 +73,7 @@ GEM
     whirly (0.2.6)
       unicode-display_width (~> 1.1)
     wisper (1.6.1)
+    word_wrap (1.0.0)
     xdg (2.2.3)
 
 PLATFORMS
@@ -67,6 +85,7 @@ DEPENDENCIES
   commander!
   faraday!
   faraday_middleware!
+  http!
   mail!
   paint!
   terminal-table!
@@ -74,6 +93,7 @@ DEPENDENCIES
   tty-pager!
   tty-prompt!
   whirly!
+  word_wrap!
   xdg!
 
 BUNDLED WITH

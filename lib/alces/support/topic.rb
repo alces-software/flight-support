@@ -1,3 +1,4 @@
+require 'alces/support/api'
 require 'alces/support/article'
 require 'yaml'
 
@@ -10,9 +11,7 @@ module Alces
         end
 
         def all
-          @all ||=
-            YAML.load_file(File.join(Config.root, 'etc', 'topics.yml'))
-              .map(&Topic.method(:new))
+          @all ||= API.new.fetch_topics.map(&Topic.method(:new))
         end
       end
 

@@ -10,8 +10,17 @@ module Alces
           File.join(File.dirname(__FILE__),'..','..','..')
         end
 
+        def center_url
+          ENV['cw_CENTER_URL'] || data[:center_url] ||
+            'https://staging.accounts.alces-flight.com'
+        end
+
         def email
           data[:auth_email]
+        end
+
+        def auth_token
+          data[:auth_token]
         end
 
         def name

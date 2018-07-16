@@ -4,6 +4,7 @@ require 'alces/support/topic'
 require 'colorize'
 require 'tty-pager'
 require 'tty-prompt'
+require 'word_wrap'
 
 module Alces
   module Support
@@ -16,15 +17,31 @@ module Alces
 To find the right support article, please select from the following topics.
 EOF
           puts Paint[s2, '#2794d8']
+          topics = Topic.all
+          if topics.empty?
+            prompt.error "No topics are currently available."
+          else
+            main_loop(topics)
+          end
+        rescue NotAuthenticatedError
+          prompt.error "Fetching topics failed"
+          prompt.warn WordWrap.ww(
+            "Before you can use this tool you need to login to the Flight " \
+            "Platform with:" 
+          )
+          prompt.warn "  #{Pretty.command('alces account login')}"
+        rescue TTY::Prompt::Reader::InputInterrupt
+          nil
+        end
+
+        def main_loop(topics)
           catch :quit do
             loop do
               catch :top do
-                topic_drill_down(Topic.all, top_level: true)
+                topic_drill_down(topics, top_level: true)
               end
             end
           end
-        rescue TTY::Prompt::Reader::InputInterrupt
-          nil
         end
 
         def topic_drill_down(topics, top_level: false)
