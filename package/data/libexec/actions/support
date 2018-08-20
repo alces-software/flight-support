@@ -1,7 +1,7 @@
 : '
 : NAME: support
-: SYNOPSIS: Request support for your research environment
-: VERSION: 1.0.0
+: SYNOPSIS: Find help for your research environment
+: VERSION: 2.0.0
 : '
 #==============================================================================
 # Copyright (C) 2018 Stephen F. Norledge and Alces Software Ltd.
@@ -34,24 +34,19 @@ case $action in
         exec "${cw_ROOT}"/opt/ruby/bin/ruby \
           "${cw_ROOT}"/opt/flight-support/bin/flight-support --help "$@"
         ;;
-    i|in|inf|info)
-        exec "${cw_ROOT}"/opt/ruby/bin/ruby \
-          "${cw_ROOT}"/opt/flight-support/bin/flight-support info "$@"
-        ;;
-    r|re|req|requ|reque|reques|request)
-        exec "${cw_ROOT}"/opt/ruby/bin/ruby \
-          "${cw_ROOT}"/opt/flight-support/bin/flight-support request "$@"
-        ;;
+    f|fi|fin|find)
+         exec "${cw_ROOT}"/opt/ruby/bin/ruby \
+           "${cw_ROOT}"/opt/flight-support/bin/flight-support find "$@"
+         ;;
     *)
         cat <<EOF
 Usage: $cw_BINNAME COMMAND [[OPTION]... [ARGS]]
-Request support for your research environment.
+Find help for your research environment.
 
 Commands:
 EOF
 printf "  %-22s  %s\n" "$cw_BINNAME help" "More help about this command."
-printf "  %-22s  %s\n" "$cw_BINNAME info" "Information about support requests."
-printf "  %-22s  %s\n" "$cw_BINNAME request" "Create a support request."
+printf "  %-22s  %s\n" "$cw_BINNAME find" "Find a support article."
 cat <<EOF
 
 Please report bugs to support@alces-software.com
