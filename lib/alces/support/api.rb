@@ -12,6 +12,8 @@ module Alces
 
         if [401, 403].include? response.status
           raise NotAuthenticatedError
+        elsif [404].include? response.status
+          raise TopicFetchError, 'No topics found'
         elsif !response.status.success?
           data = (JSON.parse(response) rescue {})
           if data.key?('error')
