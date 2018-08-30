@@ -6,6 +6,7 @@
     "summary": "Alces Flight support request CLI tool",
     "username": "alces",
     "dependencies": [
+      "flight-account-cli"
     ]
   }
 }

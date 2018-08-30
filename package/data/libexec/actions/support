@@ -31,12 +31,16 @@ cw_BINNAME="${cw_BINNAME} $(basename "$0")"
 
 case $action in
     h|he|hel|help)
-        exec "${cw_ROOT}"/opt/ruby/bin/ruby \
+        exec ruby \
           "${cw_ROOT}"/opt/flight-support/bin/flight-support --help "$@"
         ;;
     f|fi|fin|find)
-         exec "${cw_ROOT}"/opt/ruby/bin/ruby \
+         exec ruby \
            "${cw_ROOT}"/opt/flight-support/bin/flight-support find "$@"
+         ;;
+    i|in|inf|info)
+         exec ruby \
+           "${cw_ROOT}"/opt/flight-support/bin/flight-support info "$@"
          ;;
     *)
         cat <<EOF
