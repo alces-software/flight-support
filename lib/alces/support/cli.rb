@@ -1,7 +1,7 @@
 require 'commander/no-global-highline'
 require 'alces/support/commands/find'
 require 'alces/support/commands/info'
-require 'alces/support/commands/request'
+# require 'alces/support/commands/request'
 
 module Alces
   module Support
@@ -27,13 +27,13 @@ module Alces
           c.action Commands::Info, :info
         end
 
-        command :request do |c|
-          c.syntax = 'support request'
-          c.summary = 'Make a support request'
-          c.description = 'Make a support request.'
-          c.option '--from EMAIL', 'From address'
-          c.action Commands::Request, :request
-        end
+        # command :request do |c|
+        #   c.syntax = 'support request'
+        #   c.summary = 'Make a support request'
+        #   c.description = 'Make a support request.'
+        #   c.option '--from EMAIL', 'From address'
+        #   c.action Commands::Request, :request
+        # end
 
         run!
       end
