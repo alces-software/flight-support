@@ -28,6 +28,7 @@ pushd "${REPO_ROOT}" > /dev/null
 git archive HEAD | tar -x -C "${temp_dir}"/"${build_dest}"
 popd > /dev/null
 
+yum install -y gcc-c++ zip
 pushd "${temp_dir}"/"${build_dest}" > /dev/null
 bundle install --without="development test" --path=vendor
 
