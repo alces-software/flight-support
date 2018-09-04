@@ -19,7 +19,7 @@ module Alces
           if data.key?('error')
             raise TopicFetchError, data['error']
           else
-            raise TopicFetchError, response.to_s
+            raise TopicFetchError, 'Unexpected error'
           end
         else
           JSON.parse(response.to_s)['topics']

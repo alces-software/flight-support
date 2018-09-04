@@ -44,8 +44,15 @@ EOF
             "Platform with:" 
           )
           prompt.warn "  #{Pretty.command('alces account login')}"
+        rescue TopicFetchError
+          prompt.error $!.message
         rescue TTY::Prompt::Reader::InputInterrupt
           nil
+        rescue HTTP::ConnectionError
+          prompt.error WordWrap.ww(
+            "Unable to connect to Flight Center. " \
+            "Please check your network connection."
+          )
         end
 
         def main_loop(topics)
