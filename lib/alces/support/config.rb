@@ -12,7 +12,9 @@ module Alces
 
         def center_url
           ENV['cw_CENTER_URL'] || data[:center_url] ||
-            'https://staging.accounts.alces-flight.com'
+            # 'http://center.alces-flight.lvh.me:3003'
+            # 'https://staging.center.alces-flight.com'
+            'https://center.alces-flight.com'
         end
 
         def email
