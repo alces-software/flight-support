@@ -13,6 +13,20 @@ module Alces
         def find(args, options)
           Pretty.banner('Alces Flight support request tool',
                         'v1.0.2 -- 2018-05-30')
+          unless Config.auth_token
+            prompt.warn WordWrap.ww(
+              "Before you can use this tool you need to login to the Flight " \
+              "Platform with:" 
+            )
+            prompt.warn "  #{Pretty.command('alces account login')}"
+            puts ""
+            prompt.warn WordWrap.ww(
+              "If you do not yet have a Flight Platform account please sign up" \
+              "for one with:"
+            )
+            prompt.warn "  #{Pretty.command('alces account subscribe')}"
+            return
+          end
           s2 = <<EOF
 To find the right support article, please select from the following topics.
 EOF
